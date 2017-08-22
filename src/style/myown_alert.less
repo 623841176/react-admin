@@ -1,0 +1,177 @@
+.auiDialog {
+  position: fixed;
+  z-index: 111;
+  width: 25%;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #FAFAFC;
+  text-align: center;
+  border-radius: 3px;
+}
+.auiDialogHeader {
+  padding: 10px 15px 0;
+  text-align: center;
+  font-size: 1em;
+}
+.auiDialogBody {
+  padding: 3rem 1.5rem 2.5rem;
+  overflow: hidden;
+  font-size: 1.5rem;
+  color: #888;
+  text-align: left;
+  text-indent: 2em;
+  word-wrap: break-word;
+}
+.auiDialogFooter {
+  position: relative;
+  font-size: 1em;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.auiDialogBtn {
+  position: relative;
+  text-align: center;
+  padding: 15px 0;
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.auiDialogBtn:after {
+  border-left: 1px solid #dbdbdb;
+  border-top: 1px solid #dbdbdb;
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform: scale(1);
+  pointer-events: none;
+}
+.auiDialogBtn:first-child:after {
+  border-left: 0;
+}
+.auiTextInfo {
+  color: #666;
+}
+.auiTextDanger {
+  color: #e74c3c;
+}
+.auiMask {
+  position: fixed;
+  width: 100%;
+  height: 150%;
+  top: -25%;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 110;
+}
+.toast {
+  background: rgba(222, 19, 26, 0.9);
+  color: #fff;
+  font-size: 1.7rem;
+  z-index: 111;
+  position: absolute;
+  display: inline-block;
+  // top: 0;
+  left: 0;
+  width: 100%;
+  right: 0;
+  // bottom: 0;
+  // margin: auto;
+  line-height: 2.2rem;
+  padding: 2rem;
+  box-sizing: content-box;
+  text-align: center;
+  // border-radius: .5rem;
+  word-wrap: break-word;
+  transition-duration: 0.5s;
+  >div {
+    display: inline-block;
+    max-width: 100%;
+    word-break: break-all;
+  }
+}
+.okToast {
+  background: rgba(31, 193, 24, 0.9);
+}
+
+  // copy from WalletList.less
+.alertBg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  .alertBoxDS {
+    width: 800px;
+    td {
+      width: 25%;
+    }
+    p {
+      padding: 30px;
+    }
+  }
+  .alertBoxDC {
+    width: 1200px;
+    th, td {
+      max-width: 130px;
+    }
+  }
+  .alertBoxBO {
+    width: 600px;
+    textarea {
+      width: 100%;
+    }
+  }
+  .alertBoxDD {
+    width: 800px;
+    .remarkTd {
+      text-align: left!important;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  .alertBox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    max-height: 600px;
+    overflow: auto;
+    .printBox {
+      width: 100%;
+      padding: 30px;
+      background: white;
+      table {
+        height: 100%;
+        width: 100%;
+        caption {
+          font-size: 18px;
+        }
+        th, td {
+          border: 1px solid #999;
+          text-align: center;
+          // width: 25%;
+          box-sizing: border-box;
+        }
+        .bigTd {
+          padding: 10px 20px;
+          line-height: 26px !important;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
