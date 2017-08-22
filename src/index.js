@@ -32,6 +32,13 @@ import { createStore, applyMiddleware } from 'redux';
 import reducer from './reducer';
 import AuthBasic from './components/auth/Basic';
 import RouterEnter from './components/auth/RouterEnter';
+import {toast, showMessage} from './components/public/Alert';
+
+import OneKeyOrderTimeLine from './components/front/OneKeyOrderTimeLine'
+import EasyPayAppendActionAnalyze from './components/front/EasyPayAppendActionAnalyze'
+
+window.toast = toast;
+window.showMessage = showMessage;
 
 const Wysiwyg = (location, cb) => {     // 按需加载富文本配置
     require.ensure([], require => {
@@ -75,6 +82,10 @@ const routes =
             <Route path="auth">
                 <Route path="basic" component={AuthBasic} />
                 <Route path="routerEnter" component={RouterEnter} />
+            </Route>
+            <Route path={'front'}>
+                <Route path={'oneKeyOrderTimeLine'} component={OneKeyOrderTimeLine} />
+                <Route path={'EasyPayAppendActionAnalyze'} component={EasyPayAppendActionAnalyze} />
             </Route>
         </Route>
         <Route path={'login'} components={Login} />

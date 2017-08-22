@@ -2,24 +2,41 @@
  * Created by hao.cheng on 2017/5/3.
  */
 import React from 'react';
-import { Row, Col, Card, Timeline, Icon } from 'antd';
+import { Row, Col, Card, Timeline, Icon, message, Modal } from 'antd';
 import BreadcrumbCustom from '../BreadcrumbCustom';
 import EchartsViews from './EchartsViews';
 import EchartsProjects from './EchartsProjects';
 import b1 from '../../style/imgs/b1.jpg';
+import {Get, Post} from '../../services/fetch.js';
 
 
 class Dashboard extends React.Component {
+    testFetch(){
+        Get("/selectd?storeId=080e7385-52b0-4245-8ce8-e8607b4bf066&action=front_node_easyPay_to_index_before_paid_default",{mode: 'cors'}).then(function(res){
+            console.log(res);
+        })
+
+        Modal.confirm({
+            content: '获取数据失败，是否尝试重新获取数据',
+            onOk: () => {
+                window.location.reload();
+            },
+            onCancel: () => {},
+            okText: "2132321",
+            cancelText: "mnhihih"
+        });
+
+
+    }
     render() {
         return (
             <div className="gutter-example button-demo">
                 <BreadcrumbCustom />
-
                 <Row gutter={10}>
                     <Col className="gutter-row" span={4}>
                         <div className="gutter-box">
                             <Card bordered={false}>
-                                <div className="clear y-center">
+                                <div className="clear y-center" onClick={this.testFetch}>
                                     <div className="pull-left mr-m">
                                         <Icon type="heart" className="text-2x text-danger" />
                                     </div>

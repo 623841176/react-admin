@@ -6,6 +6,7 @@ import HeaderCustom from './components/HeaderCustom';
 import { receiveData } from './action';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import Alert from './components/public/Alert';
 const { Content, Footer } = Layout;
 
 class App extends Component {
@@ -33,7 +34,8 @@ class App extends Component {
               <Layout>
                 <HeaderCustom toggle={this.toggle} user={auth.data || {}} router={router} collapsed={this.state.collapsed} />
                 <Content style={{ margin: '0 16px', overflow: 'initial' }}>
-                  {this.props.children}
+                    {this.props.children}
+                    <Alert />
                 </Content>
                 <Footer style={{ textAlign: 'center' }}>
                   React-Admin ©2017 Created by 865470087@qq.com

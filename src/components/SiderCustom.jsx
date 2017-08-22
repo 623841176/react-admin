@@ -130,6 +130,20 @@ class SiderCustom extends Component {
                         <Menu.Item key="/app/auth/basic"><Link to={'/app/auth/basic'}>基础演示</Link></Menu.Item>
                         <Menu.Item key="/app/auth/routerEnter"><Link to={'/app/auth/routerEnter'}>路由拦截</Link></Menu.Item>
                     </SubMenu>
+                    <SubMenu
+                        key="/app/front"
+                        title={<span><Icon type="user" /><span className="nav-text">用户端信息</span></span>}
+                    >
+                        <Menu.Item key="/app/front/oneKeyOrderTimeLine"><Link to={'/app/front/oneKeyOrderTimeLine'}>一键支付时间线</Link></Menu.Item>
+                        <Menu.Item key="/app/front/EasyPayAppendActionAnalyze"><Link to={'/app/front/EasyPayAppendActionAnalyze'}>活动数据统计</Link></Menu.Item>
+                    </SubMenu>
+                    <SubMenu
+                        key="/app/store"
+                        title={<span><Icon type="shop" /><span className="nav-text">门店端信息</span></span>}
+                    >
+                        <Menu.Item key="/app/store/basic"><Link to={'/404'}>33333</Link></Menu.Item>
+                        <Menu.Item key="/app/store/routerEnter"><Link to={'/404'}>44444</Link></Menu.Item>
+                    </SubMenu>
                 </Menu>
                 <style>
                     {`

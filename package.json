@@ -3,6 +3,14 @@
   "version": "0.1.0",
   "homepage": ".",
   "private": true,
+  "proxy": {
+    "/selectd": {
+        "target": "http://localhost:3000"
+    },
+    "/api-admin/store/list": {
+        "target": "http://admin.bestfood517.com"
+    }
+  },
   "dependencies": {
     "antd": "^2.11.2",
     "autoprefixer": "7.1.1",
@@ -59,7 +67,16 @@
     "webpack": "2.6.1",
     "webpack-dev-server": "2.5.0",
     "webpack-manifest-plugin": "1.1.0",
-    "whatwg-fetch": "2.0.3"
+    "whatwg-fetch": "2.0.3",
+    "isomorphic-fetch": "^2.2.1",
+    "body-parser": "~1.17.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "ejs": "~2.5.6",
+    "express": "~4.15.2",
+    "mongodb": "^2.2.30",
+    "morgan": "~1.8.1",
+    "serve-favicon": "~2.4.2"
   },
   "devDependencies": {
     "babel-plugin-import": "^1.2.1",
